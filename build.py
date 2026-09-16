@@ -126,7 +126,7 @@ html=f'''<!doctype html>
 <section class="section" id="publications" aria-labelledby="publications-title"><div class="section-title"><h2 id="publications-title">Research Highlights</h2></div>{''.join(paper(p) for p in d['papers'] if not p.get('earlier'))}</section>
 {collaborations()}
 {section('education','Education',education())}
-{section('academic-service','Academic Service','<p><strong>'+e(d['academic_service']['role'])+':</strong> Conferences and journals, including '+e(', '.join(d['academic_service']['venues'][:-1]))+', and '+e(d['academic_service']['venues'][-1])+'.</p>')}
+{section('academic-service','Academic Service','<p><strong>'+e(d['academic_service']['role'])+':</strong> '+e(', '.join(d['academic_service']['venues'][:-1]))+', and '+e(d['academic_service']['venues'][-1])+', among others.</p>')}
 {bibliography()}
 </main></div><script src="assets/scholar.js" defer></script></body></html>'''
 (ROOT/'dist/index.html').write_text(html,encoding='utf-8')
