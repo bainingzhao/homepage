@@ -1,0 +1,733 @@
+{
+  "about": [
+    "I am a Ph.D. student in Data Science and Information Technology at <strong>Tsinghua University</strong>. My research focuses on <strong>embodied spatial intelligence</strong>: building an embodied brain that understands its environment, predicts future states, and acts to complete tasks.",
+    "Before my Ph.D., I received my M.Eng. and B.Eng. from <strong>South China University of Technology</strong>, where I worked on machine learning and optimization for energy systems. Beyond my primary research, I am also interested in quantitative investing."
+  ],
+  "papers": [
+    {
+      "id": "worldvln",
+      "title": "WorldVLN: Autoregressive World Action Model for Aerial Vision-Language Navigation",
+      "authors": "Baining Zhao, Jiacheng Xu, Weicheng Feng, Xin Zhang, Zhaolu Wang, Haoyang Wang, Shilong Ji, Ziyou Wang, Jianjie Fang, Zhiheng Zheng, Weichen Zhang, Yu Shang, Wei Wu, Chen Gao, Xinlei Chen, Yong Li",
+      "venue": "arXiv",
+      "year": "2026",
+      "description": "Autoregressive world-action prediction with reinforcement learning for closed-loop aerial navigation.",
+      "links": {
+        "Paper": "https://arxiv.org/abs/2605.15964",
+        "Project": "https://embodiedcity.github.io/WorldVLN/",
+        "Code": "https://github.com/EmbodiedCity/WorldVLN.code"
+      },
+      "media": {
+        "image": "assets/publications/worldvln.png",
+        "alt": "WorldVLN two-stage training and action-aware reinforcement learning framework",
+        "video": "assets/publications/worldvln-selected.mp4",
+        "poster": "assets/publications/worldvln-selected.jpg",
+        "video_alt": "WorldVLN outdoor real-world, indoor real-world, and simulator navigation demonstrations"
+      }
+    },
+    {
+      "id": "airscape",
+      "title": "AirScape: An Aerial Generative World Model with Motion Controllability",
+      "authors": "Baining Zhao, Rongze Tang, Mingyuan Jia, Ziyou Wang, Fanhang Man, Xin Zhang, Yu Shang, Weichen Zhang, Wei Wu, Chen Gao, Xinlei Chen, Yong Li",
+      "venue": "ACM MM",
+      "year": "2025",
+      "description": "Predicting future observations from visual inputs and motion intentions for aerial agents with six degrees of freedom.",
+      "links": {
+        "Paper": "https://dl.acm.org/doi/10.1145/3746027.3758180",
+        "Project": "https://embodiedcity.github.io/AirScape/",
+        "Dataset": "https://huggingface.co/datasets/EmbodiedCity/AirScape-Dataset",
+        "Code": "https://github.com/EmbodiedCity/AirScape.code"
+      },
+      "media": {
+        "image": "assets/publications/airscape.png",
+        "alt": "AirScape aerial video and motion-intention dataset overview",
+        "video": "assets/publications/airscape-demo.mp4",
+        "poster": "assets/publications/airscape-poster.jpg",
+        "video_alt": "AirScape: An Aerial Generative World Model with Motion Controllability demonstration"
+      }
+    },
+    {
+      "id": "embodiedr",
+      "title": "Embodied-R: Collaborative Framework for Activating Embodied Spatial Reasoning in Foundation Models via Reinforcement Learning",
+      "authors": "Baining Zhao, Ziyou Wang, Jianjie Fang, Chen Gao, Fanhang Man, Jinqiang Cui, Xin Wang, Xinlei Chen, Yong Li, Wenwu Zhu",
+      "venue": "ACM MM",
+      "year": "2025",
+      "description": "Combining visual perception and language-based reasoning, with reinforcement learning to improve embodied spatial reasoning.",
+      "links": {
+        "Paper": "https://doi.org/10.1145/3746027.3755703",
+        "Project": "https://embodiedcity.github.io/Embodied-R/",
+        "Code": "https://github.com/EmbodiedCity/Embodied-R.code"
+      },
+      "media": {
+        "image": "assets/publications/embodiedr.jpg",
+        "alt": "Embodied-R perception, reasoning, and reinforcement learning framework",
+        "video": "assets/publications/embodied-r-demo.mp4",
+        "poster": "assets/publications/embodied-r-poster.jpg",
+        "video_alt": "Embodied-R: Collaborative Framework for Activating Embodied Spatial Reasoning in Foundation Models via Reinforcement Learning demonstration"
+      }
+    },
+    {
+      "id": "navigation",
+      "title": "How Far Are Large Multimodal Models from Human-Level Spatial Action? A Benchmark for Goal-Oriented Embodied Navigation in Urban Airspace",
+      "authors": "Baining Zhao, Ziyou Wang, Jianjie Fang, Zile Zhou, Yanggang Xu, Yatai Ji, Jiacheng Xu, Qian Zhang, Weichen Zhang, Chen Gao, Xinlei Chen",
+      "venue": "KDD",
+      "year": "2026",
+      "note": "Oral",
+      "description": "Evaluating spatial decision-making through goal-oriented navigation in urban 3D environments.",
+      "links": {
+        "Paper": "https://dl.acm.org/doi/10.1145/3770855.3817501",
+        "Dataset": "https://huggingface.co/datasets/EmbodiedCity/EmbodiedNav-Bench",
+        "Code": "https://github.com/EmbodiedCity/EmbodiedNav-Bench"
+      },
+      "media": {
+        "image": "assets/publications/navigation.png",
+        "alt": "Urban aerial navigation benchmark overview and example goal trajectories"
+      }
+    },
+    {
+      "id": "urbanvideo",
+      "title": "UrbanVideo-Bench: Benchmarking Vision-Language Models on Embodied Intelligence with Video Data in Urban Spaces",
+      "authors": "Baining Zhao, Jianjie Fang, Zichao Dai, Ziyou Wang, Jirong Zha, Weichen Zhang, Chen Gao, Yue Wang, Jinqiang Cui, Xinlei Chen, Yong Li",
+      "venue": "ACL",
+      "year": "2025",
+      "note": "Oral",
+      "description": "A video benchmark for recall, perception, reasoning, and navigation using real and simulated urban drone observations.",
+      "links": {
+        "Paper": "https://aclanthology.org/2025.acl-long.1558/",
+        "Project": "https://embodiedcity.github.io/UrbanVideo-Bench/",
+        "Dataset": "https://huggingface.co/datasets/EmbodiedCity/UrbanVideo-Bench",
+        "Code": "https://github.com/EmbodiedCity/UrbanVideo-Bench.code"
+      },
+      "media": {
+        "image": "assets/publications/urbanvideo-bench.png",
+        "alt": "UrbanVideo-Bench overview"
+      }
+    },
+    {
+      "id": "embodiedcity",
+      "title": "EmbodiedCity: A Benchmark Platform for Embodied Agent in Real-world City Environment",
+      "authors": "Chen Gao, Baining Zhao, Weichen Zhang, Jinzhu Mao, Jun Zhang, Zhiheng Zheng, Fanhang Man, Jianjie Fang, Zile Zhou, Jinqiang Cui, Xinlei Chen, Yong Li",
+      "venue": "arXiv",
+      "year": "2024",
+      "description": "A realistic city simulation platform for evaluating perception, planning, and action in open urban environments.",
+      "links": {
+        "Paper": "https://arxiv.org/abs/2410.09604",
+        "Simulator": "https://huggingface.co/datasets/EmbodiedCity/EmbodiedCity-Simulator",
+        "Code": "https://github.com/tsinghua-fib-lab/EmbodiedCity"
+      },
+      "media": {
+        "image": "assets/publications/embodiedcity.png",
+        "alt": "EmbodiedCity simulated urban environment and agent interface",
+        "video": "assets/publications/embodiedcity-web.mp4",
+        "poster": "assets/publications/embodiedcity-web.jpg",
+        "video_alt": "EmbodiedCity demonstration of the real-world city environment benchmark platform"
+      }
+    },
+    {
+      "id": "mobility",
+      "title": "Estimating and modeling spontaneous mobility changes during the COVID-19 pandemic without stay-at-home orders",
+      "authors": "Baining Zhao, Xuzhe Wang, Tianyu Zhang, Rongye Shi, Fengli Xu, Fanhang Man, Erbing Chen, Yang Li, Yong Li, Tao Sun, Xinlei Chen",
+      "venue": "HSS Comms",
+      "year": "2024",
+      "earlier": true,
+      "description": "Humanities and Social Sciences Communications, 11, Article 591.",
+      "links": {
+        "Paper": "https://www.nature.com/articles/s41599-024-03068-4"
+      },
+      "media": {
+        "image": "assets/publications/mobility.png",
+        "alt": "Changes in public transport trips and urban mobility patterns during the pandemic"
+      }
+    },
+    {
+      "id": "energy2024",
+      "title": "Fast distributed co-optimization of electricity and natural gas systems hedging against wind fluctuation and uncertainty",
+      "authors": "Baining Zhao, Tong Qian, Weiwei Li, Yanli Xin, Wei Zhao, Zekang Lin, Wenhu Tang, Xin Jin, Wangzhang Cao, Tingzhe Pan",
+      "venue": "Energy",
+      "year": "2024",
+      "earlier": true,
+      "description": "Energy, 298, Article 131420.",
+      "links": {
+        "Paper": "https://doi.org/10.1016/j.energy.2024.131420"
+      },
+      "media": {
+        "image": "assets/publications/energy2024.jpg",
+        "alt": "Adaptive ADMM framework for distributed electricity and natural gas scheduling"
+      }
+    },
+    {
+      "id": "energy2022",
+      "title": "A data-enhanced distributionally robust optimization method for economic dispatch of integrated electricity and natural gas systems with wind uncertainty",
+      "authors": "Baining Zhao, Tong Qian, Wenhu Tang, Qiheng Liang",
+      "venue": "Energy",
+      "year": "2022",
+      "earlier": true,
+      "description": "Energy, 243, Article 123113.",
+      "links": {
+        "Paper": "https://doi.org/10.1016/j.energy.2022.123113"
+      },
+      "media": {
+        "image": "assets/publications/energy2022.jpg",
+        "alt": "Coupled electricity and natural gas system with wind generation"
+      }
+    },
+    {
+      "id": "signal",
+      "title": "Signal-to-Signal Translation for Fault Diagnosis of Bearings and Gears With Few Fault Samples",
+      "authors": "Baining Zhao, Zhewen Niu, Qiheng Liang, Yanli Xin, Tong Qian, Wenhu Tang, Qiuwei Wu",
+      "venue": "IEEE TIM",
+      "year": "2021",
+      "earlier": true,
+      "description": "IEEE Transactions on Instrumentation and Measurement, 70, pp. 1–10.",
+      "links": {
+        "Paper": "https://doi.org/10.1109/TIM.2021.3123433"
+      },
+      "media": {
+        "image": "assets/publications/signal.svg",
+        "alt": "Conceptual method overview redrawn from the paper abstract: signal translation generates auxiliary fault signals for diagnosis",
+        "caption": "Method overview · redrawn"
+      }
+    }
+  ],
+  "education": [
+    {
+      "title": "Tsinghua University",
+      "date": "Sep 2022 – Present",
+      "subtitle": "Ph.D. student · Data Science and Information Technology",
+      "text": "Research: embodied spatial intelligence, foundation models, and post-training. Honors: Tsinghua University Second-Class Scholarship; school-level Second-Class Scholarship.",
+      "degree": "Ph.D. Student",
+      "major": "Data Science and Information Technology",
+      "research": "Foundation models and post-training for embodied spatial intelligence.",
+      "honors": "Tsinghua University Second-Class Scholarship; school-level Second-Class Scholarship.",
+      "chinese_name": "清华大学"
+    },
+    {
+      "title": "South China University of Technology",
+      "date": "Sep 2019 – Jun 2022",
+      "subtitle": "M.Eng. · Electrical Engineering",
+      "text": "Ranked 1 / 68. Outstanding Graduate of the school.",
+      "degree": "M.Eng.",
+      "major": "Electrical Engineering",
+      "rank": "1 / 68 (Top 2%)",
+      "research": "Machine learning, operations research, and their applications to power systems.",
+      "honors": "Outstanding Graduate of the School.",
+      "chinese_name": "华南理工大学"
+    },
+    {
+      "title": "South China University of Technology",
+      "date": "Sep 2015 – Jun 2019",
+      "subtitle": "B.Eng. · Electrical Engineering and Automation",
+      "text": "Ranked 11 / 310. Honors: National Scholarship; Meritorious Winner, Mathematical Contest in Modeling (team leader); Provincial First Prize, National College Student Mathematics Competition.",
+      "degree": "B.Eng.",
+      "major": "Electrical Engineering and Automation",
+      "rank": "11 / 310 (Top 5%)",
+      "honors": "National Scholarship (Top 2%); Meritorious Winner, Mathematical Contest in Modeling (team leader); Provincial First Prize, National College Student Mathematics Competition; University First Prize, Mathematics Competition.",
+      "chinese_name": "华南理工大学"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Tencent Hunyuan",
+      "date": "Mar 2026 – Jul 2026",
+      "subtitle": "Research Intern · World Models, 3D Generation",
+      "text": "Worked on controllable driving world models and multi-agent, multi-view generation with spatial and temporal consistency."
+    },
+    {
+      "title": "Alibaba Cloud",
+      "date": "Jan 2022 – Mar 2022",
+      "subtitle": "Algorithm Engineering Intern · Intelligent Product Solutions",
+      "text": "Developed industrial quality anomaly detection and design-of-experiments tools; explored data augmentation for few-shot visual inspection."
+    },
+    {
+      "title": "GF Securities",
+      "date": "Oct 2021 – Feb 2022",
+      "subtitle": "Quant Developer Intern · IT & Asset Management",
+      "text": "Studied graph-based financial data mining, factor combination, and risk exposure control."
+    }
+  ],
+  "research": [
+    {
+      "title": "Embodied Agents in Urban Environments",
+      "date": "2024 – Present",
+      "subtitle": "Urban simulation and multimodal agents",
+      "text": "Built city-scale simulation environments with Unreal Engine and AirSim, and developed agents for embodied question answering and vision-language navigation."
+    },
+    {
+      "title": "Multi-Agent Aerial Systems",
+      "date": "2022 – 2026",
+      "subtitle": "Peng Cheng Laboratory · Intelligent Collaboration",
+      "text": "Worked on cloud–edge–device coordination, task planning, and collaborative search and navigation for teams of drones."
+    }
+  ],
+  "honors": [
+    "Tsinghua University Second-Class Scholarship; school-level Second-Class Scholarship",
+    "Outstanding Graduate, South China University of Technology (master’s)",
+    "National Scholarship (undergraduate)",
+    "Meritorious Winner, Mathematical Contest in Modeling (team leader)",
+    "Provincial First Prize, National College Student Mathematics Competition"
+  ],
+  "bibliography": [
+    {
+      "group": "preprint-first",
+      "authors": "Zhao B, Xu J, Feng W, Zhang X, Wang Z, Wang H, Ji S, Wang Z, Fang J, Zheng Z, Zhang W, Shang Y, Wu W, Gao C, Chen X, Li Y",
+      "title": "WorldVLN: Autoregressive World Action Model for Aerial Vision-Language Navigation",
+      "year": 2026,
+      "venue": "arXiv",
+      "details": "arXiv:2605.15964",
+      "note": "NeurIPS 2026 submission",
+      "url": "https://arxiv.org/abs/2605.15964",
+      "working": false
+    },
+    {
+      "group": "published-first",
+      "authors": "Zhao B, Tang R, Jia M, Wang Z, Man F, Zhang X, Shang Y, Zhang W, Wu W, Gao C, Chen X, Li Y",
+      "title": "AirScape: An Aerial Generative World Model with Motion Controllability",
+      "year": 2025,
+      "venue": "Proceedings of the ACM International Conference on Multimedia (ACM MM)",
+      "details": "pp. 12519–12528",
+      "note": "",
+      "url": "https://dl.acm.org/doi/10.1145/3746027.3758180",
+      "working": false,
+      "rating": {
+        "label": "CCF-A",
+        "basis": "CCF recommended international conferences, 2022 edition, Category A.",
+        "source": "https://guoguibing.github.io/cn/docs/ccf-2022.pdf"
+      }
+    },
+    {
+      "group": "published-first",
+      "authors": "Zhao B, Wang Z, Fang J, Gao C, Man F, Cui J, Wang X, Chen X, Li Y, Zhu W",
+      "title": "Embodied-R: Collaborative Framework for Activating Embodied Spatial Reasoning in Foundation Models via Reinforcement Learning",
+      "year": 2025,
+      "venue": "Proceedings of the ACM International Conference on Multimedia (ACM MM)",
+      "details": "pp. 11071–11080",
+      "note": "",
+      "url": "https://doi.org/10.1145/3746027.3755703",
+      "working": false,
+      "rating": {
+        "label": "CCF-A",
+        "basis": "CCF recommended international conferences, 2022 edition, Category A.",
+        "source": "https://guoguibing.github.io/cn/docs/ccf-2022.pdf"
+      }
+    },
+    {
+      "group": "published-first",
+      "authors": "Zhao B, Wang Z, Fang J, Zhou Z, Xu Y, Ji Y, Xu J, Zhang Q, Zhang W, Gao C, Chen X",
+      "title": "How Far Are Large Multimodal Models from Human-Level Spatial Action? A Benchmark for Goal-Oriented Embodied Navigation in Urban Airspace",
+      "year": 2026,
+      "venue": "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)",
+      "details": "pp. 10326–10337",
+      "note": "Oral (Top 5%)",
+      "url": "https://dl.acm.org/doi/10.1145/3770855.3817501",
+      "working": false,
+      "rating": {
+        "label": "CCF-A",
+        "basis": "CCF recommended international conferences, 2022 edition, Category A.",
+        "source": "https://guoguibing.github.io/cn/docs/ccf-2022.pdf"
+      }
+    },
+    {
+      "group": "published-first",
+      "authors": "Zhao B, Fang J, Dai Z, Wang Z, Zha J, Zhang W, Gao C, Wang Y, Cui J, Chen X, Li Y",
+      "title": "UrbanVideo-Bench: Benchmarking Vision-Language Models on Embodied Intelligence with Video Data in Urban Spaces",
+      "year": 2025,
+      "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL)",
+      "details": "pp. 32400–32423",
+      "note": "Oral (Top 2%)",
+      "url": "https://aclanthology.org/2025.acl-long.1558/",
+      "working": false,
+      "rating": {
+        "label": "CCF-A",
+        "basis": "CCF recommended international conferences, 2022 edition, Category A.",
+        "source": "https://guoguibing.github.io/cn/docs/ccf-2022.pdf"
+      }
+    },
+    {
+      "group": "published-first",
+      "authors": "Zhao B, Wang X, Zhang T, Shi R, Xu F, Man F, Chen E, Li Y, Li Y, Sun T, Chen X",
+      "title": "Estimating and Modeling Spontaneous Mobility Changes during the COVID-19 Pandemic without Stay-at-Home Orders",
+      "year": 2024,
+      "venue": "Humanities and Social Sciences Communications",
+      "details": "11, Article 591",
+      "note": "",
+      "url": "https://www.nature.com/articles/s41599-024-03068-4",
+      "working": false,
+      "rating": {
+        "label": "JCR Q1",
+        "basis": "JCR 2024 journal quartile (2024 metrics; not publication-year or SJR quartiles).",
+        "source": "https://www.iit.comillas.edu/publicacion/info_revista/en/902/Humanities_and_Social_Sciences_Communications"
+      }
+    },
+    {
+      "group": "published-first",
+      "authors": "Zhao B, Qian T, Li W, Xin Y, Zhao W, Lin Z, Tang W, Jin X, Cao W, Pan T",
+      "title": "Fast Distributed Co-Optimization of Electricity and Natural Gas Systems Hedging against Wind Fluctuation and Uncertainty",
+      "year": 2024,
+      "venue": "Energy",
+      "details": "298, Article 131420",
+      "note": "",
+      "url": "https://doi.org/10.1016/j.energy.2024.131420",
+      "working": false,
+      "rating": {
+        "label": "JCR Q1",
+        "basis": "JCR 2024 journal quartile (2024 metrics; not publication-year or SJR quartiles).",
+        "source": "https://www.iit.comillas.edu/publicacion/info_revista/es/219/Energy"
+      }
+    },
+    {
+      "group": "published-first",
+      "authors": "Zhao B, Qian T, Tang W, Liang Q",
+      "title": "A Data-Enhanced Distributionally Robust Optimization Method for Economic Dispatch of Integrated Electricity and Natural Gas Systems with Wind Uncertainty",
+      "year": 2022,
+      "venue": "Energy",
+      "details": "243, Article 123113",
+      "note": "",
+      "url": "https://doi.org/10.1016/j.energy.2022.123113",
+      "working": false,
+      "rating": {
+        "label": "JCR Q1",
+        "basis": "JCR 2024 journal quartile (2024 metrics; not publication-year or SJR quartiles).",
+        "source": "https://www.iit.comillas.edu/publicacion/info_revista/es/219/Energy"
+      }
+    },
+    {
+      "group": "published-first",
+      "authors": "Zhao B, Niu Z, Liang Q, Xin Y, Qian T, Tang W, Wu Q",
+      "title": "Signal-to-Signal Translation for Fault Diagnosis of Bearings and Gears with Few Fault Samples",
+      "year": 2021,
+      "venue": "IEEE Transactions on Instrumentation and Measurement",
+      "details": "70, pp. 1–10",
+      "note": "",
+      "url": "https://doi.org/10.1109/TIM.2021.3123433",
+      "working": false,
+      "rating": {
+        "label": "JCR Q1",
+        "basis": "JCR 2024 journal quartile (2024 metrics; not publication-year or SJR quartiles).",
+        "source": "https://www.iit.comillas.edu/publicacion/info_revista/es/29/IEEE_Transactions_on_Instrumentation_and_Measurement"
+      }
+    },
+    {
+      "group": "published-first",
+      "authors": "Zhao B, Lan H, Niu Z, Zhu H, Qian T, Tang W",
+      "title": "Detection and Location of Safety Protective Wear in Power Substation Operation Using Wear-Enhanced YOLOv3 Algorithm",
+      "year": 2021,
+      "venue": "IEEE Access",
+      "details": "9, pp. 125540–125549",
+      "note": "",
+      "url": "https://doi.org/10.1109/ACCESS.2021.3104731",
+      "working": false,
+      "rating": {
+        "label": "JCR Q2",
+        "basis": "JCR 2024 journal quartile (2024 metrics; not publication-year or SJR quartiles).",
+        "source": "https://www.iit.comillas.edu/publicacion/info_revista/en/457/IEEE_Access"
+      }
+    },
+    {
+      "group": "preprint-co",
+      "authors": "Gao C, Zhao B, Zhang W, Mao J, Zhang J, Zheng Z, Man F, Fang J, Zhou Z, Cui J, Chen X, Li Y",
+      "title": "EmbodiedCity: A Benchmark Platform for Embodied Agent in Real-World City Environment",
+      "year": 2024,
+      "venue": "arXiv",
+      "details": "arXiv:2410.09604",
+      "note": "",
+      "url": "https://arxiv.org/abs/2410.09604",
+      "working": false
+    },
+    {
+      "group": "published-co",
+      "authors": "Xin Y, Zhao B, Liang Q, Zhou J, Qian T, Yu Z, Tang W",
+      "title": "Development of Improved Suppression Measures against Reignition Overvoltages Caused by Vacuum Circuit Breakers in Offshore Wind Farms",
+      "year": 2022,
+      "venue": "IEEE Transactions on Power Delivery",
+      "details": "37(1), pp. 517–527",
+      "note": "",
+      "url": "https://doi.org/10.1109/TPWRD.2021.3064306",
+      "working": false,
+      "rating": {
+        "label": "JCR Q2",
+        "basis": "JCR 2024 journal quartile (2024 metrics; not publication-year or SJR quartiles).",
+        "source": "https://topj.lib.whu.edu.cn/show.asp?cat=sci&id=6201"
+      }
+    },
+    {
+      "group": "published-co",
+      "authors": "Xin Y, Yang YH, Zhao B, Xu L, Yu ZY, Tang W",
+      "title": "Configuration of Suppression Schemes against High-Frequency Transient Reignition Overvoltages Caused by Shunt Reactor Switching-Off in Offshore Wind Farms",
+      "year": 2022,
+      "venue": "International Journal of Electrical Power & Energy Systems",
+      "details": "141, Article 108170",
+      "note": "",
+      "url": "https://doi.org/10.1016/j.ijepes.2022.108170",
+      "working": false,
+      "rating": {
+        "label": "JCR Q1",
+        "basis": "JCR 2024 journal quartile (2024 metrics; not publication-year or SJR quartiles).",
+        "source": "https://www.iit.comillas.edu/personas/tomas"
+      }
+    },
+    {
+      "group": "published-co",
+      "authors": "Tang W, Niu Z, Zhao B, Ji T, Li M, Wu Q",
+      "title": "Research and Application of Data-Driven Artificial Intelligence Technology for Condition Analysis of Power Equipment",
+      "year": 2020,
+      "venue": "High Voltage Engineering",
+      "details": "46(9), pp. 2985–2999",
+      "note": "In Chinese",
+      "url": "https://doi.org/10.13336/j.1003-6520.hve.20191902",
+      "working": false,
+      "rating": {
+        "label": "EI",
+        "basis": "EI Compendex indexing, confirmed by the Chinese Society for Electrical Engineering (2025 journal profile).",
+        "source": "https://csee.org.cn/portal/xpxhqksy/20250430/29739.html"
+      }
+    },
+    {
+      "group": "published-co",
+      "authors": "Tang W, Liang Q, Zhao B, Xin Y, Gu Y",
+      "title": "Short-Circuit Fault Classification Method for AC Submarine Cables in Offshore Wind Farms Based on Improved Sparse Representation",
+      "year": 2023,
+      "venue": "Proceedings of the CSEE",
+      "details": "43(6), pp. 2212–2222",
+      "note": "In Chinese",
+      "url": "https://kns.cnki.net/kcms2/article/abstract?v=wFrtWXqGzUh_i2K1x6S1SSBi6-H167-MrnKDZYu6DvEc4rtOVydXus2raH-ZzUrqD_rG5V3qcmMTMmblYNKOwXVlQs65k-5ii4Gil2DgO6TwAfxjKMSfRZCgjm9T9Qa9rzgARAwpww5JcZ6TdnHNIWz4PDBO3nm2Mx5xEKzlo5GP19O3JzgwzA==&uniplatform=NZKPT&language=CHS",
+      "working": false,
+      "rating": {
+        "label": "EI",
+        "basis": "EI Compendex indexing, confirmed by the Chinese Society for Electrical Engineering (2025 journal profile).",
+        "source": "https://www.csee.org.cn/portal/xpxhqksy/20250429/29733.html"
+      }
+    },
+    {
+      "group": "preprint-co",
+      "authors": "Man F, Chen X, Wang H, Zhao B, Li H, Chen X, Li Y",
+      "title": "VAEER: Visual Attention-Inspired Emotion Elicitation Reasoning",
+      "year": 2025,
+      "venue": "arXiv",
+      "details": "arXiv:2505.24342",
+      "note": "",
+      "url": "https://arxiv.org/abs/2505.24342",
+      "working": false
+    },
+    {
+      "group": "published-co",
+      "authors": "Niu Z, Reformat MZ, Tang W, Zhao B",
+      "title": "Electrical Equipment Identification Method with Synthetic Data Using Edge-Oriented Generative Adversarial Network",
+      "year": 2020,
+      "venue": "IEEE Access",
+      "details": "8, pp. 136487–136497",
+      "note": "",
+      "url": "https://doi.org/10.1109/ACCESS.2020.3011689",
+      "working": false,
+      "rating": {
+        "label": "JCR Q2",
+        "basis": "JCR 2024 journal quartile (2024 metrics; not publication-year or SJR quartiles).",
+        "source": "https://www.iit.comillas.edu/publicacion/info_revista/en/457/IEEE_Access"
+      }
+    },
+    {
+      "group": "published-co",
+      "authors": "Tang W, Zhao W, Qian T, Zhao B, Lin Z, Xin Y",
+      "title": "Learning-Accelerated Asynchronous Decentralized Optimization for Integrated Transmission and Distribution Systems over Lossy Networks",
+      "year": 2022,
+      "venue": "Sustainable Energy, Grids and Networks",
+      "details": "31, Article 100724",
+      "note": "",
+      "url": "https://doi.org/10.1016/j.segan.2022.100724",
+      "working": false,
+      "rating": {
+        "label": "JCR Q1",
+        "basis": "JCR 2024 journal quartile (2024 metrics; not publication-year or SJR quartiles).",
+        "source": "https://www.iit.comillas.edu/personas/aramos"
+      }
+    },
+    {
+      "group": "published-co",
+      "authors": "Liu G, Cui J, Liu X, Zhao B, Li W",
+      "title": "LLM-Driven Automatic Construction and Resource Optimization for Large-Scale UAV Simulation",
+      "year": 2025,
+      "venue": "International Conference on Bio-inspired System and Robotics",
+      "details": "pp. 312–322",
+      "note": "",
+      "url": "https://link.springer.com/chapter/10.1007/978-981-92-3086-0_32",
+      "working": false
+    },
+    {
+      "group": "published-co",
+      "authors": "Li Z, Man F, Chen X, Zhao B, Wu C, Chen X",
+      "title": "TRACT: Towards Large-Scale Crowdsensing with High-Efficiency Swarm Path Planning",
+      "year": 2022,
+      "venue": "Adjunct Proceedings of the ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp/ISWC), Workshop",
+      "details": "pp. 409–414",
+      "note": "",
+      "url": "https://dl.acm.org/doi/abs/10.1145/3544793.3560401",
+      "working": false
+    },
+    {
+      "group": "published-co",
+      "authors": "Zhang W, Gao C, Yu S, Peng R, Zhao B, Zhang Q, Cui J, Chen X, Li Y",
+      "title": "CityNavAgent: Aerial Vision-and-Language Navigation with Hierarchical Semantic Planning and Global Memory",
+      "year": 2025,
+      "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL)",
+      "details": "pp. 31292–31309",
+      "note": "",
+      "url": "https://aclanthology.org/2025.acl-long.1511.pdf",
+      "working": false,
+      "rating": {
+        "label": "CCF-A",
+        "basis": "CCF recommended international conferences, 2022 edition, Category A.",
+        "source": "https://guoguibing.github.io/cn/docs/ccf-2022.pdf"
+      }
+    },
+    {
+      "group": "published-co",
+      "authors": "Man F, Wang H, Fang J, Deng Z, Zhao B, Chen X, Li Y",
+      "title": "Context-Aware Sentiment Forecasting via LLM-Based Multi-Perspective Role-Playing Agents",
+      "year": 2025,
+      "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL)",
+      "details": "pp. 2687–2703",
+      "note": "",
+      "url": "https://aclanthology.org/2025.acl-long.136.pdf",
+      "working": false,
+      "rating": {
+        "label": "CCF-A",
+        "basis": "CCF recommended international conferences, 2022 edition, Category A.",
+        "source": "https://guoguibing.github.io/cn/docs/ccf-2022.pdf"
+      }
+    },
+    {
+      "group": "published-co",
+      "authors": "Fang J, Lei Y, Wan Q, Wang Z, Huang Y, Xu Y, Zhao B, Zhang W, Gao C, Chen X, Li Y",
+      "title": "A Benchmark for Interactive World Models with a Unified Action Generation Framework",
+      "year": 2026,
+      "venue": "International Conference on Machine Learning (ICML)",
+      "details": "",
+      "note": "",
+      "url": "https://arxiv.org/abs/2605.03941",
+      "working": false,
+      "rating": {
+        "label": "CCF-A",
+        "basis": "CCF recommended international conferences, 2022 edition, Category A.",
+        "source": "https://guoguibing.github.io/cn/docs/ccf-2022.pdf"
+      }
+    },
+    {
+      "group": "published-co",
+      "authors": "Zhang W, Tang P, Zeng X, Man F, Yu S, Dai Z, Zhao B, Chen H, Shang Y, Wu W, Gao C, Chen X, Wang X, Li Y, Zhu W",
+      "title": "Aerial World Model for Long-Horizon Visual Generation and Navigation in 3D Space",
+      "year": 2026,
+      "venue": "Proceedings of the ACM International Conference on Multimedia (ACM MM)",
+      "details": "",
+      "note": "",
+      "url": "https://arxiv.org/abs/2512.21887",
+      "working": false,
+      "rating": {
+        "label": "CCF-A",
+        "basis": "CCF recommended international conferences, 2022 edition, Category A.",
+        "source": "https://guoguibing.github.io/cn/docs/ccf-2022.pdf"
+      }
+    },
+    {
+      "group": "preprint-co",
+      "authors": "Fang J, Xu Y, Wang Z, Gao C, Huang Y, Wang Z, Tang R, Jia M, Zhao B, Zhang W, Zhang X, Su H, Shang Y, Wu W, Chen X, Li Y",
+      "title": "Worldscape-MoE: A Unified Mixture-of-Experts World Model for Scalable Heterogeneous Action Control",
+      "year": 2026,
+      "venue": "arXiv",
+      "details": "arXiv:2607.03964",
+      "note": "",
+      "url": "https://arxiv.org/abs/2607.03964",
+      "working": false
+    },
+    {
+      "group": "preprint-first",
+      "authors": "Zhao B, Peng S, Wang Y, Wang Z, Zhang X, Xu J, Feng W, Wang Z, Fang J, Zhang W, Wu W, Gao C, Chen X, Li Y",
+      "title": "Reason-WAM: Vision-Language Reasoning for World Action Model in Urban Aerial Goal Navigation",
+      "year": null,
+      "venue": "Manuscript under review",
+      "details": "",
+      "note": "ICLR 2027 submission",
+      "url": "",
+      "working": true
+    },
+    {
+      "group": "preprint-co",
+      "authors": "Meng Y, Zhao B, Wu J, Wang T, Tang R, Zhang H, Sun W, Gao C, Chen Z, Chen X, Li Y, Zhang X, Guo C",
+      "title": "CoDrive: Cross-Vehicle World-Consistent Video Generation with Precise Trajectory Control for Cooperative Driving",
+      "year": null,
+      "venue": "Manuscript under review",
+      "details": "",
+      "note": "ICLR 2027 submission",
+      "url": "",
+      "working": true
+    },
+    {
+      "group": "preprint-co",
+      "authors": "Meng Y, Gao C, Zhao B, Jia M, Tang R, Wang Z, Fang J, Wan Q, Lei Y, Tang J, Li J, Zhang X, Shang Y, Wu W, Chen X, Zhang X, Li Y",
+      "title": "WorldScape: Efficient Real-Time Interactive World Modeling with Versatile Control",
+      "year": null,
+      "venue": "Manuscript under review",
+      "details": "",
+      "note": "NeurIPS 2026 submission",
+      "url": "https://manifoldai.cn/assets/file/WorldScape.pdf",
+      "working": true
+    },
+    {
+      "group": "preprint-co",
+      "authors": "Fang J, Wang Z, Zhao B, Zheng Z, Dai Z, Gao C, Chen X, Li Y",
+      "title": "SAWMAN: Spatial-Aware World Model Agent for Aerial Embodied Navigation",
+      "year": null,
+      "venue": "Manuscript under review",
+      "details": "",
+      "note": "AAAI 2027 submission",
+      "url": "",
+      "working": true
+    },
+    {
+      "group": "preprint-co",
+      "authors": "Tang J, Jia M, Wang Z, Jin X, Zhang X, Fang J, Zhao B, Shang Y, Gao C, Wu W, Li Y",
+      "title": "WorldREPA: Extending Representation Alignment to Multi-Source World Knowledge Learning",
+      "year": null,
+      "venue": "Manuscript under review",
+      "details": "",
+      "note": "NeurIPS 2026 submission",
+      "url": "",
+      "working": true
+    }
+  ],
+  "collaborations": [
+    {
+      "partner": "Tencent",
+      "video": "assets/collaborations/tencent-codrive-web.mp4",
+      "poster": "assets/collaborations/tencent-codrive-web.jpg",
+      "title": "Tencent Hunyuan: Multi-Agent World Model for Autonomous Driving",
+      "paper_prefix": "CoDrive:"
+    },
+    {
+      "partner": "Manifold AI",
+      "video": "assets/collaborations/worldscape-moe-web.mp4",
+      "poster": "assets/collaborations/worldscape-moe-web.jpg",
+      "title": "Manifold AI: An Interactive World Model Unifying Locomotion and Manipulation",
+      "paper_prefix": "Worldscape-MoE:",
+      "display_venue": "arXiv",
+      "display_year": 2026
+    }
+  ],
+  "topics": [
+    "Spatial Intelligence",
+    "Vision-Language Navigation",
+    "Vision-Language Models",
+    "World Models",
+    "Post-Training"
+  ],
+  "scholar_metrics": {
+    "total_citations": null,
+    "updated": null
+  },
+  "academic_service": {
+    "role": "Reviewer",
+    "venues": [
+      "NeurIPS",
+      "ICML",
+      "ACL Rolling Review (ARR)",
+      "AAAI"
+    ]
+  }
+}

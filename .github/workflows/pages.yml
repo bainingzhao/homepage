@@ -1,0 +1,71 @@
+name: Update Scholar and Deploy Pages
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 8 * * *'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GOOGLE_SCHOLAR_ID: ${{ secrets.GOOGLE_SCHOLAR_ID || 'aEts7nUAAAAJ' }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Restore last successful citation data
+        uses: actions/cache/restore@v4
+        with:
+          path: .scholar-cache
+          key: scholar-${{ env.GOOGLE_SCHOLAR_ID }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: scholar-${{ env.GOOGLE_SCHOLAR_ID }}-
+      - name: Install Scholar reader
+        id: dependencies
+        continue-on-error: true
+        run: python -m pip install -r scripts/scholar-requirements.txt
+      - name: Refresh citation total
+        id: scholar
+        if: steps.dependencies.outcome == 'success'
+        continue-on-error: true
+        timeout-minutes: 4
+        run: python scripts/update_scholar.py --output .scholar-cache/gs_data.json
+      - name: Cache successful refresh
+        if: steps.scholar.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: .scholar-cache
+          key: scholar-${{ env.GOOGLE_SCHOLAR_ID }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Build homepage and install verified citation data
+        run: |
+          python build.py
+          python scripts/install_scholar_data.py
+      - name: Report unavailable refresh
+        if: steps.scholar.outcome != 'success'
+        run: echo '::warning::Google Scholar refresh was unavailable. Existing verified data is retained; if this is the first run, the badge stays unavailable until a successful refresh.'
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
