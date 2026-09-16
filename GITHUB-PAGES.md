@@ -14,15 +14,15 @@
 
 - 推送到 main/master、手动运行或每天 UTC 08:17（北京时间16:17）时，工作流尝试获取 Scholar 总引用数。
 - 成功后生成 `dist/assets/gs_data.json` 并随网页一起发布。徽章读取这个同站点文件，不直接从访客浏览器访问 Google Scholar。
-- 只读取作者引用统计，避免逐篇访问产生不必要的请求。当前显示的是总引用数，不是单篇引用数。
-- 成功结果保存在 GitHub Actions 缓存中；之后抓取失败会保留可用的上次结果及真实更新时间。缓存不是永久存储，可能被 GitHub 清理。也可将一次验证过的 gs_data.json 提交到 dist/assets/，作为长期备用数据。
+- 直接读取公开主页的 Citations / All 数值，只发起一次请求，最多等待30秒。不依赖 scholarly 或额外 Python 包。当前显示的是总引用数，不是单篇引用数。
+- 自动抓取的成功结果保存在 GitHub Actions 缓存中；之后抓取失败会保留可用的上次结果及真实更新时间。仓库另存有2026年9月16日核实的662次引用作为备用值。缓存可能被清理，此时回退到仓库的备用值，不会把旧数据标为最新。工作流没有仓库写权限。
 - 尚无成功结果时仍显示横杠，不会用 0 或估算值冒充。Google Scholar 可能限制自动请求，因此无法保证每次抓取成功；GitHub Pages 能部署成功也不代表 Scholar 抓取成功。
 
 ## 如果仍然是横杠
 
 在 Actions 查看 **Refresh citation total** 步骤日志。若出现访问限制或超时，稍后手动重试。网页发布步骤仍会正常运行，并给出引用更新警告。
 
-首次成功后，打开 `https://你的GitHub用户名.github.io/assets/gs_data.json` 应看到 `scholar_id`、`citedby` 和 `updated`。如果 JSON 有数字而徽章没有，请确认页面引用了 assets/scholar.js，并刷新页面。
+首次成功后，打开 `https://bainingzhao.github.io/homepage/assets/gs_data.json` 应看到 `scholar_id`、`citedby` 和 `updated`。如果 JSON 有数字而徽章没有，请确认页面引用了 assets/scholar.js，并刷新页面。
 
 如果希望保存一份长期备用数据，将以上页面下载得到的真实 JSON 原样保存为 `dist/assets/gs_data.json` 后提交。不要手工修改其更新时间。
 
