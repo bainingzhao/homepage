@@ -31,17 +31,10 @@ jobs:
           path: .scholar-cache
           key: scholar-${{ env.GOOGLE_SCHOLAR_ID }}-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: scholar-${{ env.GOOGLE_SCHOLAR_ID }}-
-      - name: Install Scholar reader
-        id: dependencies
-        continue-on-error: true
-        run: |
-          python -m pip install -r scripts/scholar-requirements.txt
-          python -c "from scholarly import scholarly; from bibtexparser.bibdatabase import BibDatabase"
       - name: Refresh citation total
         id: scholar
-        if: steps.dependencies.outcome == 'success'
         continue-on-error: true
-        timeout-minutes: 4
+        timeout-minutes: 1
         run: python scripts/update_scholar.py --output .scholar-cache/gs_data.json
       - name: Cache successful refresh
         if: steps.scholar.outcome == 'success'

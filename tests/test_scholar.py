@@ -26,5 +26,15 @@ class CitationDataTests(unittest.TestCase):
         data = dict(scholar_id='test', citedby=0, updated='2026-09-15T00:00:00+00:00')
         self.assertEqual(module.validate(data, 'test')['citedby'], 0)
 
+class StatisticsParserTests(unittest.TestCase):
+    def test_all_time_not_recent_or_h_index(self):
+        html = '<table id="gsc_rsb_st"><tr><td><a>Citations</a></td><td>1,234</td><td>500</td></tr><tr><td>h-index</td><td>15</td><td>12</td></tr></table>'
+        self.assertEqual(module.parse_total(html), 1234)
+
+    def test_blocked_or_missing_data_is_not_zero(self):
+        for html in ['<html>CAPTCHA</html>', '<table id="gsc_rsb_st"><td>Citations</td><td>—</td><td>3</td></table>']:
+            with self.assertRaises(ValueError):
+                module.parse_total(html)
+
 if __name__ == '__main__':
     unittest.main()
