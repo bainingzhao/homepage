@@ -1,7 +1,24 @@
 (() => {
   'use strict';
   const videos = [...document.querySelectorAll('video[data-viewport-play]')];
-  if (!('IntersectionObserver' in window)) return; // Native controls remain usable.
+  function load(video) {
+    const source = video.querySelector('source[data-src]');
+    if (!source) return;
+    source.src = source.dataset.src;
+    source.removeAttribute('data-src');
+    video.load();
+  }
+  videos.forEach(video => {
+    video.muted = true;
+    video.playsInline = true;
+    // Allow direct interaction even before the observer callback has arrived.
+    video.addEventListener('pointerdown', () => load(video), {once: true});
+    video.addEventListener('keydown', () => load(video), {once: true});
+  });
+  if (!('IntersectionObserver' in window)) {
+    videos.forEach(load); // No automatic playback; native controls still work.
+    return;
+  }
   const visible = new Map(videos.map(video => [video, false]));
   const shouldPlay = video => visible.get(video) && !document.hidden;
   function sync(video) {
@@ -9,6 +26,7 @@
       video.pause();
       return;
     }
+    load(video);
     if (!video.paused) return;
     const pending = video.play();
     if (pending) pending.then(() => {

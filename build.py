@@ -40,7 +40,7 @@ def paper(p):
     if media:
         figure=f'<img src="{e(media["image"])}" alt="{e(media["alt"])}" loading="lazy" decoding="async" width="500" height="300">'
         if media.get('video'):
-            visual=f'<video controls data-viewport-play loop muted playsinline preload="metadata" poster="{e(media.get("poster",media["image"]))}" aria-label="{e(media.get("video_alt",media["alt"]))} — video demo"><source src="{e(media["video"])}" type="video/mp4"><a href="{e(media["video"])}">Watch video demo</a></video>'
+            visual=f'<video controls data-viewport-play loop muted playsinline preload="none" poster="{e(media.get("poster",media["image"]))}" aria-label="{e(media.get("video_alt",media["alt"]))} — video demo"><source data-src="{e(media["video"])}" type="video/mp4"><a href="{e(media["video"])}">Watch video demo</a></video>'
             caption=f'<a href="{e(media["video"])}" target="_blank" rel="noopener">Click to enlarge ↗</a>'
         else:
             visual=f'<a class="figure-link" href="{e(media["image"])}" target="_blank" rel="noopener" aria-label="View full-size figure: {e(p["title"])}">{figure}</a>'
@@ -109,7 +109,7 @@ def collaborations():
         display_venue=e(item.get('display_venue',publication['note']))
         if item.get('display_year'):
             display_venue=f'<em>{display_venue}</em> {item["display_year"]}'
-        cards.append(f'<article class="paper-box collaboration-card"><figure class="publication-visual"><div class="media-frame video-frame"><video controls data-viewport-play loop muted playsinline preload="metadata" poster="{poster}" aria-label="{name} collaboration demo"><source src="{video}" type="video/mp4"><a href="{video}">Watch Demo</a></video></div><figcaption><a href="{video}" target="_blank" rel="noopener">Click to enlarge ↗</a></figcaption></figure><div class="paper-box-text"><h3>{e(item["title"])}</h3><p class="collaboration-paper-title">{paper_title}</p><p class="authors">{authors}</p><p class="publication-venue">{display_venue}</p></div></article>')
+        cards.append(f'<article class="paper-box collaboration-card"><figure class="publication-visual"><div class="media-frame video-frame"><video controls data-viewport-play loop muted playsinline preload="none" poster="{poster}" aria-label="{name} collaboration demo"><source data-src="{video}" type="video/mp4"><a href="{video}">Watch Demo</a></video></div><figcaption><a href="{video}" target="_blank" rel="noopener">Click to enlarge ↗</a></figcaption></figure><div class="paper-box-text"><h3>{e(item["title"])}</h3><p class="collaboration-paper-title">{paper_title}</p><p class="authors">{authors}</p><p class="publication-venue">{display_venue}</p></div></article>')
     return section('industry-collaborations','Selected Industry Collaboration Projects',''.join(cards))
 
 scholar='https://scholar.google.com/citations?user=aEts7nUAAAAJ&amp;hl=en'
