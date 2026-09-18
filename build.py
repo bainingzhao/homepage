@@ -115,6 +115,7 @@ def collaborations():
 scholar='https://scholar.google.com/citations?user=aEts7nUAAAAJ&amp;hl=en'
 icon='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM4 5l8 7 8-7"/></svg>'
 style_version=hashlib.sha256((ROOT/'dist/assets/style.css').read_bytes()).hexdigest()[:12]
+video_version=hashlib.sha256((ROOT/'dist/assets/video-visibility.js').read_bytes()).hexdigest()[:12]
 html=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Baining Zhao · 赵柏宁 | Tsinghua University</title><meta name="description" content="Baining Zhao is a Ph.D. student at Tsinghua University studying embodied spatial intelligence, world models, and reinforcement learning for aerial navigation.">
@@ -128,6 +129,6 @@ html=f'''<!doctype html>
 {section('education','Education',education())}
 {section('academic-service','Academic Service','<p><strong>'+e(d['academic_service']['role'])+':</strong> '+e(', '.join(d['academic_service']['venues'][:-1]))+', and '+e(d['academic_service']['venues'][-1])+', among others.</p>')}
 {bibliography()}
-</main></div><script src="assets/scholar.js" defer></script><script src="assets/video-visibility.js" defer></script></body></html>'''
+</main></div><script src="assets/scholar.js" defer></script><script src="assets/video-visibility.js?v={video_version}" defer></script></body></html>'''
 (ROOT/'dist/index.html').write_text(html,encoding='utf-8')
 print('Rendered dist/index.html with',len(d['papers']),'selected publications.')
