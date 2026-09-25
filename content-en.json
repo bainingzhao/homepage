@@ -8,7 +8,7 @@
       "id": "worldvln",
       "title": "WorldVLN: Autoregressive World Action Model for Aerial Vision-Language Navigation",
       "authors": "Baining Zhao, Jiacheng Xu, Weicheng Feng, Xin Zhang, Zhaolu Wang, Haoyang Wang, Shilong Ji, Ziyou Wang, Jianjie Fang, Zhiheng Zheng, Weichen Zhang, Yu Shang, Wei Wu, Chen Gao, Xinlei Chen, Yong Li",
-      "venue": "arXiv",
+      "venue": "NeurIPS",
       "year": "2026",
       "description": "Autoregressive world-action prediction with reinforcement learning for closed-loop aerial navigation.",
       "links": {
@@ -267,15 +267,20 @@
   ],
   "bibliography": [
     {
-      "group": "preprint-first",
+      "group": "published-first",
       "authors": "Zhao B, Xu J, Feng W, Zhang X, Wang Z, Wang H, Ji S, Wang Z, Fang J, Zheng Z, Zhang W, Shang Y, Wu W, Gao C, Chen X, Li Y",
       "title": "WorldVLN: Autoregressive World Action Model for Aerial Vision-Language Navigation",
       "year": 2026,
-      "venue": "arXiv",
-      "details": "arXiv:2605.15964",
-      "note": "NeurIPS 2026 submission",
+      "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+      "details": "",
+      "note": "Accepted",
       "url": "https://arxiv.org/abs/2605.15964",
-      "working": false
+      "working": false,
+      "rating": {
+        "label": "CCF-A",
+        "basis": "CCF recommended international conferences, 2022 edition, Category A.",
+        "source": "https://guoguibing.github.io/cn/docs/ccf-2022.pdf"
+      }
     },
     {
       "group": "published-first",
