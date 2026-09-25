@@ -36,6 +36,8 @@ def paper(p):
     authors=author_line(p['authors'])
     links=''.join(resource_link(label,url) for label,url in p['links'].items())
     venue=f'<p class="publication-venue"><em>{e(p["venue"])}</em> {p["year"]}'+(' · '+e(p['note']) if p.get('note') and 'submission' not in p['note'].lower() else '')+'</p>'
+    if p.get('status'):
+        venue=venue.replace('</p>', ' ('+e(p['status'])+')</p>')
     media=p.get('media')
     if media:
         figure=f'<img src="{e(media["image"])}" alt="{e(media["alt"])}" loading="lazy" decoding="async" width="500" height="300">'

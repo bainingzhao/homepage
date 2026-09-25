@@ -22,7 +22,8 @@
         "video": "assets/publications/worldvln-selected.mp4",
         "poster": "assets/publications/worldvln-selected.jpg",
         "video_alt": "WorldVLN outdoor real-world, indoor real-world, and simulator navigation demonstrations"
-      }
+      },
+      "status": "Accepted"
     },
     {
       "id": "airscape",
