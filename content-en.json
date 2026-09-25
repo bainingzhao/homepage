@@ -632,15 +632,20 @@
       }
     },
     {
-      "group": "preprint-co",
+      "group": "published-co",
       "authors": "Fang J, Xu Y, Wang Z, Gao C, Huang Y, Wang Z, Tang R, Jia M, Zhao B, Zhang W, Zhang X, Su H, Shang Y, Wu W, Chen X, Li Y",
       "title": "Worldscape-MoE: A Unified Mixture-of-Experts World Model for Scalable Heterogeneous Action Control",
       "year": 2026,
-      "venue": "arXiv",
-      "details": "arXiv:2607.03964",
-      "note": "",
+      "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+      "details": "",
+      "note": "Accepted",
       "url": "https://arxiv.org/abs/2607.03964",
-      "working": false
+      "working": false,
+      "rating": {
+        "label": "CCF-A",
+        "basis": "CCF recommended international conferences, 2022 edition, Category A.",
+        "source": "https://guoguibing.github.io/cn/docs/ccf-2022.pdf"
+      }
     },
     {
       "group": "preprint-first",
@@ -712,8 +717,9 @@
       "poster": "assets/collaborations/worldscape-moe-web.jpg",
       "title": "Manifold AI: An Interactive World Model Unifying Locomotion and Manipulation",
       "paper_prefix": "Worldscape-MoE:",
-      "display_venue": "arXiv",
-      "display_year": 2026
+      "display_venue": "NeurIPS",
+      "display_year": 2026,
+      "status": "Accepted"
     }
   ],
   "topics": [

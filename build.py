@@ -111,6 +111,8 @@ def collaborations():
         display_venue=e(item.get('display_venue',publication['note']))
         if item.get('display_year'):
             display_venue=f'<em>{display_venue}</em> {item["display_year"]}'
+        if item.get('status'):
+            display_venue+=' ('+e(item['status'])+')'
         cards.append(f'<article class="paper-box collaboration-card"><figure class="publication-visual"><div class="media-frame video-frame"><video controls data-viewport-play loop muted playsinline preload="none" poster="{poster}" aria-label="{name} collaboration demo"><source data-src="{video}" type="video/mp4"><a href="{video}">Watch Demo</a></video></div><figcaption><a href="{video}" target="_blank" rel="noopener">Click to enlarge ↗</a></figcaption></figure><div class="paper-box-text"><h3>{e(item["title"])}</h3><p class="collaboration-paper-title">{paper_title}</p><p class="authors">{authors}</p><p class="publication-venue">{display_venue}</p></div></article>')
     return section('industry-collaborations','Selected Industry Collaboration Projects',''.join(cards))
 
