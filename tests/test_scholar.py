@@ -3,6 +3,10 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
+import subprocess
+import io
+from contextlib import redirect_stdout
 
 spec = importlib.util.spec_from_file_location('update_scholar', Path(__file__).parents[1]/'scripts/update_scholar.py')
 module = importlib.util.module_from_spec(spec)
@@ -35,6 +39,32 @@ class StatisticsParserTests(unittest.TestCase):
         for html in ['<html>CAPTCHA</html>', '<table id="gsc_rsb_st"><td>Citations</td><td>—</td><td>3</td></table>']:
             with self.assertRaises(ValueError):
                 module.parse_total(html)
+
+class DiagnosticTests(unittest.TestCase):
+    def test_private_values_never_appear_in_diagnostic(self):
+        out = io.StringIO()
+        with redirect_stdout(out):
+            data = module.diagnostics(
+                {'url_effective': 'https://scholar.google.com/sorry/index?token=secret123', 'http_code': 403},
+                'HTTP/2 403\nSet-Cookie: secret456\nX-Client-IP: 192.0.2.4\nContent-Type: text/html\nServer: gws\n',
+                '<h1>Unusual traffic</h1>192.0.2.4 person@example.com secret789', 22)
+        for private in ['secret123', 'secret456', 'secret789', '192.0.2.4', 'person@example.com']:
+            self.assertNotIn(private, out.getvalue())
+        self.assertIn('unusual traffic', data['error_page_signals'])
+        self.assertEqual(data['http_status'], 403)
+
+    def test_fetch_success_and_http_failure(self):
+        for code, body in [(0, '<table id="gsc_rsb_st"><td>Citations</td><td>674</td><td>12</td></table>'),
+                           (22, '<h1>Forbidden</h1>')]:
+            def run(args, **kwargs):
+                Path(args[args.index('--output')+1]).write_text(body, encoding='utf8')
+                Path(args[args.index('--dump-header')+1]).write_text('HTTP/2 '+('200' if code == 0 else '403'), encoding='utf8')
+                return subprocess.CompletedProcess(args, code, json.dumps({'http_code': 200 if code == 0 else 403}), '')
+            with patch.object(module.subprocess, 'run', side_effect=run), redirect_stdout(io.StringIO()):
+                if code:
+                    with self.assertRaises(RuntimeError): module.fetch_total('test')
+                else:
+                    self.assertEqual(module.fetch_total('test'), 674)
 
 if __name__ == '__main__':
     unittest.main()
