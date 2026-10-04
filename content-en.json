@@ -439,6 +439,17 @@
       "working": false
     },
     {
+      "group": "preprint-co",
+      "authors": "Meng Y, Zhao B, Wu J, Wang T, Tang R, Zhang H, Sun W, Gao C, Chen Z, Chen X, Li Y, Zhang XP, Guo C",
+      "title": "CoDrive: Cross-Vehicle World-Consistent Video Generation with Precise Trajectory Control for Cooperative Driving",
+      "year": 2026,
+      "venue": "arXiv",
+      "details": "arXiv:2609.34749",
+      "note": "",
+      "url": "https://arxiv.org/abs/2609.34749",
+      "working": false
+    },
+    {
       "group": "published-co",
       "authors": "Xin Y, Zhao B, Liang Q, Zhou J, Qian T, Yu Z, Tang W",
       "title": "Development of Improved Suppression Measures against Reignition Overvoltages Caused by Vacuum Circuit Breakers in Offshore Wind Farms",
@@ -660,17 +671,6 @@
     },
     {
       "group": "preprint-co",
-      "authors": "Meng Y, Zhao B, Wu J, Wang T, Tang R, Zhang H, Sun W, Gao C, Chen Z, Chen X, Li Y, Zhang X, Guo C",
-      "title": "CoDrive: Cross-Vehicle World-Consistent Video Generation with Precise Trajectory Control for Cooperative Driving",
-      "year": null,
-      "venue": "Manuscript under review",
-      "details": "",
-      "note": "ICLR 2027 submission",
-      "url": "",
-      "working": true
-    },
-    {
-      "group": "preprint-co",
       "authors": "Meng Y, Gao C, Zhao B, Jia M, Tang R, Wang Z, Fang J, Wan Q, Lei Y, Tang J, Li J, Zhang X, Shang Y, Wu W, Chen X, Zhang X, Li Y",
       "title": "WorldScape: Efficient Real-Time Interactive World Modeling with Versatile Control",
       "year": null,
@@ -709,7 +709,9 @@
       "video": "assets/collaborations/tencent-codrive-web.mp4",
       "poster": "assets/collaborations/tencent-codrive-web.jpg",
       "title": "Tencent Hunyuan: Multi-Agent World Model for Autonomous Driving",
-      "paper_prefix": "CoDrive:"
+      "paper_prefix": "CoDrive:",
+      "display_venue": "arXiv",
+      "display_year": 2026
     },
     {
       "partner": "Manifold AI",
