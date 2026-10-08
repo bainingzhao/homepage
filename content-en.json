@@ -1,7 +1,7 @@
 {
   "about": [
-    "I am a Ph.D. student in Data Science and Information Technology at <strong>Tsinghua University</strong>, advised by Professor <strong>Mingyao Qi</strong> and Assistant Professor <strong>Chen Gao</strong>. My research focuses on <strong>embodied spatial intelligence</strong>: building an embodied brain that understands its environment, predicts future states, and acts to complete tasks.",
-    "Before my Ph.D., I received my M.Eng. and B.Eng. from <strong>South China University of Technology</strong>. During my master's studies, I was advised by Professor <strong>Wenhu Tang</strong> and worked on machine learning and optimization for energy systems. Beyond my primary research, I am also interested in quantitative investing."
+    "I am a Ph.D. student in Data Science and Information Technology at <strong>Tsinghua University</strong>, advised by Professor <a href=\"https://www.sigs.tsinghua.edu.cn/qmy_en/main.htm\">Mingyao Qi</a> and Assistant Professor <a href=\"https://fi.ee.tsinghua.edu.cn/~gaochen/\">Chen Gao</a>. My research focuses on <strong>embodied spatial intelligence</strong>: building an embodied brain that understands its environment, predicts future states, and acts to complete tasks.",
+    "Before my Ph.D., I received my M.Eng. and B.Eng. from <strong>South China University of Technology</strong>. During my master's studies, I was advised by Professor <a href=\"https://www.kczg.org.cn/xuezhe/details?id=183904\">Wenhu Tang</a> and worked on machine learning and optimization for energy systems. Beyond my primary research, I am also interested in quantitative investing."
   ],
   "papers": [
     {
